@@ -1,6 +1,6 @@
-# Login App
+# Node js (user registration and log in Exercise)
 
-This is a simple login application built with **Node.js**, **Express**, and **MongoDB**.
+This is a simple APIs Exercise for user registration and log in built with **Node.js**, **Express**, and **MongoDB**.
 
 ## Project Structure
 
@@ -9,10 +9,14 @@ This is a simple login application built with **Node.js**, **Express**, and **Mo
 - `.env`: Environment variables for the application.
 - `config/`: Contains configuration files.
   - `db.js`: Database connection configuration.
+- `controllers/`: Contains controller files.
+  - `authController.js`: Controller for authentication logic.
 - `models/`: Contains Mongoose models.
   - `User.js`: Mongoose model for the User.
 - `routes/`: Contains route files.
   - `auth.js`: Authentication routes.
+- `services/`: Contains service files.
+  - `authService.js`: Service for authentication logic.
 - `server.js`: The main entry point of the application.
 - `package.json`: Contains project metadata and dependencies.
 
@@ -32,22 +36,16 @@ Ensure you have the following installed on your system:
 1. **Clone the repository:**
 
    ```sh
-   git clone <repository-url>
+   git clone git@github.com:kashishGadhiya-aub/nodeJS_-Exercise.git
    ```
 
-2. **Navigate to the project directory:**
-
-   ```sh
-   cd login-app
-   ```
-
-3. **Install the dependencies:**
+2. **Install the dependencies:**
 
    ```sh
    npm install
    ```
 
-4. **Set up environment variables:**
+3. **Set up environment variables:**
 
    - Create a `.env` file in the root directory.
    - Add the following environment variables:
@@ -119,8 +117,16 @@ npm run dev
    - Defines the Mongoose schema and model for the User.
 
 4. **auth.js:**
+
    - Contains authentication routes and logic for user registration and login.
+
+5. **authController.js:**
+
+   - Contains controller logic for handling authentication requests.
+
+6. **authService.js:**
+
+   - Contains service logic for authentication operations.
 
 ---
 
-# nodeJS_-Exercise
