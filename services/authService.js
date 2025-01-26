@@ -5,16 +5,16 @@ const registerUser = async (username, email) => {
     throw new Error("Username and email are required.");
   }
 
-  const usernameRegex = /^[a-zA-Z0-9_]{3,30}$/;
+  const usernameRegex = /^[a-zA-Z0-9_]{3,10}$/;
   if (!usernameRegex.test(username)) {
     throw new Error(
-      "Username must be 3-30 characters long and contain only letters, numbers, and underscores."
+      "Username must be 3-10 characters long and contain only letters, numbers, and underscores."
     );
   }
 
   const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
   if (!emailRegex.test(email)) {
-    throw new Error("Invalid email format.");
+    throw new Error("Invalid email");
   }
 
   const existingUser = await User.findOne({ username });
